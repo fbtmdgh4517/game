@@ -8,9 +8,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3>index</h3>
 <c:if test="${user!=null}">
-	${user.uiName}님 안녕하세요.
+	<h3>${user.uiName}님 안녕하세요.</h3>
+	<ul>
+		<li><a href="/user-info/my">내정보</a></li>
+		<li><a href="/board-info/list">게시판</a></li>
+		<li><a href="/user-info/logout">로그아웃</a></li>
+	</ul>
 	<button onclick="location.href='/user-info/logout'">로그아웃</button>
 </c:if>
 <c:if test="${user==null}">
