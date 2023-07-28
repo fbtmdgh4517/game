@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%--원래 user 대신 sessionScope.user로 써야됨 --%>
 <c:if test="${user!=null}">
 	<h3>${user.uiName}님 안녕하세요.</h3>
 	<ul>

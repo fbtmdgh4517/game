@@ -33,7 +33,7 @@ public class BoardInfoServlet extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		if(!isLogin(request, response)) {
+		if(!isLogin(request, response)) {		// isLogin이 true면 부정 연산자 만나서 false 되니까 if문은 실행되지 않음
 			return;
 		}
 		String cmd = CommonView.getCmd(request);
